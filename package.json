@@ -4,9 +4,17 @@
   "theme": true,
   "themeAppearance": "light",
   "description": "An arctic, north-bluish light theme based on the Nord color palette",
-  "styleSheets": ["tokens.css", "ui.css", "syntax.css", "preview.css"],
-  "keywords": ["inkdrop", "theme"],
-  "repository": "https://github.com/inkdropapp/inkdrop-nord-light",
+  "styleSheets": [
+    "tokens.css",
+    "ui.css",
+    "syntax.css",
+    "preview.css"
+  ],
+  "keywords": [
+    "inkdrop",
+    "theme"
+  ],
+  "repository": "https://github.com/inkdropapp/nord-light",
   "author": "inkdropapp",
   "license": "MIT",
   "scripts": {
@@ -15,5 +23,7 @@
   "devDependencies": {
     "@inkdropapp/theme-dev-helpers": "^0.6.1"
   },
-  "engines": { "inkdrop": "^6.0.0" }
+  "engines": {
+    "inkdrop": "^6.0.0"
+  }
 }
