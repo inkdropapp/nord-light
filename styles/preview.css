@@ -1,0 +1,133 @@
+@layer theme.preview {
+  /*
+   * Nord Light — rendered Markdown preview overrides for Inkdrop v6.
+   */
+  :root {
+    /* Nord surfaces — elevated panels sit on nord4/nord5 */
+    --nord-preview-surface: hsl(var(--hsl-neutral-200) / 80%); /* nord4 */
+    --nord-preview-surface-subtle: hsl(
+      var(--hsl-neutral-100) / 60%
+    ); /* nord5 */
+
+    /* Links — nord8, darkened for light backgrounds */
+    --mde-preview-link-color: var(--color-cyan-700);
+
+    /* Code blocks */
+    --mde-preview-codeblock-background-color: var(
+      --nord-preview-surface-subtle
+    );
+    --mde-preview-codeblock-meta-background-color: var(--nord-preview-surface);
+    --mde-preview-inline-code-text-color: hsl(var(--hsl-neutral-800));
+    --mde-preview-inline-code-border-width: 1px;
+    --mde-preview-inline-code-border-color: hsl(var(--hsl-neutral-400) / 50%);
+    --mde-preview-inline-code-background-color: hsl(
+      var(--hsl-neutral-400) / 15%
+    );
+
+    /* Tables */
+    --mde-preview-table-head-text-color: var(--color-cyan-700);
+    --mde-preview-table-head-background-color: var(--nord-preview-surface);
+    --mde-preview-table-row-background-color: var(--nord-preview-surface);
+    --mde-preview-table-row-stripe-background-color: var(
+      --nord-preview-surface-subtle
+    );
+
+    /* Images */
+    --mde-preview-image-background-color: var(--nord-preview-surface);
+
+    /* Mark — nord13 highlight */
+    --mde-preview-inline-mark-text-color: hsl(var(--hsl-yellow-950));
+    --mde-preview-inline-mark-background-color: hsl(
+      var(--hsl-yellow-500) / 30%
+    );
+    --mde-preview-inline-mark-underline-color: hsl(var(--hsl-yellow-600));
+
+    --mde-preview-heading-color: var(--color-cyan-700);
+    --mde-preview-strong-color: var(--color-neutral-950);
+    --mde-preview-em-color: var(--color-neutral-800);
+
+    /*
+     * Mermaid diagrams. Overriding these base tokens cascades to most node,
+     * actor, state, packet, tag and requirement surfaces via mermaid.css's
+     * own var() chain — the entries below only cover the token families that
+     * mermaid.css colors independently rather than cascading. Nord Light is
+     * light-only, so values are assigned directly (no light-dark()).
+     */
+    --mermaid-text-color: hsl(var(--hsl-neutral-800)); /* nord1 */
+    --mermaid-line-color: hsl(var(--hsl-cyan-700));
+    --mermaid-node-text-color: hsl(var(--hsl-neutral-800));
+    --mermaid-node-background-color: hsl(var(--hsl-neutral-100)); /* nord5 */
+    --mermaid-node-border-color: hsl(var(--hsl-blue-500)); /* nord10 */
+    --mermaid-cluster-background-color: var(--nord-preview-surface-subtle);
+    --mermaid-cluster-border-color: hsl(var(--hsl-neutral-300) / 60%);
+    --mermaid-edge-label-background-color: hsl(
+      var(--hsl-neutral-50) / 85%
+    ); /* nord6 */
+
+    /* Notes (sequence / state) — nord13 */
+    --mermaid-note-background-color: hsl(var(--hsl-yellow-100));
+    --mermaid-note-border-color: hsl(var(--hsl-yellow-600));
+    --mermaid-note-text-color: hsl(var(--hsl-yellow-950));
+
+    /*
+     * Sequence label box — nord7 chip. Keep the text neutral: Mermaid's base
+     * theme reuses labelTextColor as the gitGraph branch-label text
+     * (branchLabelColor → labelTextColor), so a tinted value leaks onto the
+     * "main"/"develop" labels.
+     */
+    --mermaid-label-box-background-color: hsl(var(--hsl-rose-100));
+    --mermaid-label-box-border-color: hsl(var(--hsl-rose-600));
+    --mermaid-label-text-color: hsl(var(--hsl-neutral-800)); /* nord1 */
+
+    /* Gantt */
+    --mermaid-section-background-color: hsl(var(--hsl-neutral-200) / 30%);
+    --mermaid-alt-section-background-color: hsl(var(--hsl-neutral-200) / 15%);
+    --mermaid-task-background-color: hsl(var(--hsl-blue-200) / 80%);
+    --mermaid-task-border-color: hsl(var(--hsl-blue-500));
+    --mermaid-active-task-background-color: hsl(var(--hsl-cyan-200) / 80%);
+    --mermaid-active-task-border-color: hsl(var(--hsl-cyan-600));
+    --mermaid-done-task-background-color: hsl(var(--hsl-neutral-300) / 60%);
+    --mermaid-done-task-border-color: hsl(var(--hsl-neutral-400));
+    --mermaid-crit-task-background-color: hsl(var(--hsl-red-200) / 80%);
+    --mermaid-crit-task-border-color: hsl(var(--hsl-red-600));
+    --mermaid-grid-color: hsl(var(--hsl-neutral-400) / 40%);
+    --mermaid-today-line-color: hsl(var(--hsl-orange-600)); /* nord12 */
+
+    /*
+     * Seed palette — pie / git / quadrant / journey categorical scales.
+     * Frost blue, Aurora purple and green keep slices distinguishable.
+     */
+    --mermaid-primary-color: hsl(var(--hsl-blue-200)); /* nord10 */
+    --mermaid-secondary-color: hsl(var(--hsl-purple-200)); /* nord15 */
+    --mermaid-tertiary-color: hsl(var(--hsl-green-200)); /* nord14 */
+
+    /* Error */
+    --mermaid-error-background-color: hsl(var(--hsl-red-50));
+    --mermaid-error-text-color: hsl(var(--hsl-red-700));
+
+    /* Event modeling — one Nord hue per element kind */
+    --mermaid-em-processor-background-color: hsl(var(--hsl-purple-500) / 35%);
+    --mermaid-em-processor-border-color: hsl(var(--hsl-purple-600));
+    --mermaid-em-read-model-background-color: hsl(var(--hsl-green-500) / 35%);
+    --mermaid-em-read-model-border-color: hsl(var(--hsl-green-600));
+    --mermaid-em-command-background-color: hsl(var(--hsl-blue-500) / 35%);
+    --mermaid-em-command-border-color: hsl(var(--hsl-blue-600));
+    --mermaid-em-event-background-color: hsl(var(--hsl-yellow-500) / 35%);
+    --mermaid-em-event-border-color: hsl(var(--hsl-yellow-600));
+
+    /* Wardley map */
+    --mermaid-wardley-evolution-color: hsl(var(--hsl-orange-600));
+
+    /* Cynefin — one Nord hue per domain */
+    --mermaid-cynefin-cliff-color: hsl(var(--hsl-red-500));
+    --mermaid-cynefin-complex-background-color: hsl(var(--hsl-green-500) / 35%);
+    --mermaid-cynefin-complicated-background-color: hsl(
+      var(--hsl-blue-500) / 35%
+    );
+    --mermaid-cynefin-chaotic-background-color: hsl(var(--hsl-red-500) / 35%);
+    --mermaid-cynefin-clear-background-color: hsl(var(--hsl-yellow-500) / 35%);
+    --mermaid-cynefin-confusion-background-color: hsl(
+      var(--hsl-purple-500) / 35%
+    );
+  }
+}
