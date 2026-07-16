@@ -141,6 +141,7 @@
     --------------------*/
     --note-list-bar-background: var(--color-neutral-100); /* nord5 */
     --note-list-bar-border-right: 1px solid hsl(var(--hsl-neutral-200));
+    --note-list-bar-section-header-background: var(--color-neutral-200); /* nord4 */
     --note-list-view-item-header-color: var(--text-color);
     --note-list-view-item-separator-border: 1px solid
       hsl(var(--hsl-neutral-200));
