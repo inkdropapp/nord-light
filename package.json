@@ -1,6 +1,6 @@
 {
   "name": "nord-light",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "theme": true,
   "themeAppearance": "light",
   "description": "An arctic, north-bluish light theme based on the Nord color palette",
