@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This repository has moved to [inkdropapp/plugins](https://github.com/inkdropapp/plugins): [`packages/nord-light`](https://github.com/inkdropapp/plugins/tree/main/packages/nord-light). It is archived and read-only; please open issues and pull requests there.
+
 # nord-light
 
 An arctic, north-bluish Inkdrop **theme** based on the [Nord color palette](https://www.nordtheme.com/) — a single theme that styles the app UI, the editor syntax, and the Markdown preview.
